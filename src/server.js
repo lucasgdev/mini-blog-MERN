@@ -93,11 +93,6 @@ app.post("/api/articles/:name/add-comment", (req, res) => {
   }, res);
 });
 
-// app.get("/hello", (req, res) => res.send("Hello !"));
-// app.get("/hello/:name", (req, res) => res.send(`Hello ${req.params.name}!`));
-
-// app.post("/hello", (req, res) => res.send(`Hello ${req.body.name}!`));
-
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname + "/build/index.html"));
 });

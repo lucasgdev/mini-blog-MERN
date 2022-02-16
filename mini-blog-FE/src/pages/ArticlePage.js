@@ -1,10 +1,11 @@
 import React, { useState, useEffect, useMemo } from "react";
 import ArticlesList from "../components/ArticlesList";
 import CommentsList from "../components/CommentsList";
+import AddCommentForm from "../components/AddCommentForm";
 import UpvotesSection from "../components/UpvotesSection";
 import NotFoundPage from "./NotFoundPage";
 
-const ArticlesPage = ({ match }) => {
+const ArticlePage = ({ match }) => {
   const name = match.params.name;
 
   const [articlesList, setArticlesList] = useState([]);
@@ -49,10 +50,11 @@ const ArticlesPage = ({ match }) => {
         <p key={key}>{paragraph}</p>
       ))}
       <CommentsList comments={articleInfo.comments} />
+      <AddCommentForm articleName={name} setArticleInfo={setArticleInfo} />
       <h3>Other Articles:</h3>
       <ArticlesList articles={otherArticles} />
     </>
   );
 };
 
-export default ArticlesPage;
+export default ArticlePage;
