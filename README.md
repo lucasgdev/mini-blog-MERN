@@ -1,2 +1,2 @@
 # mini-blog-MERN
-A mini blog codebase made with MERN mainly for studies purposes.
+A mini blog codebase made with MERN mainly for studies purposes on Node and AWS deploy.
